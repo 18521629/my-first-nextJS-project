@@ -1,28 +1,39 @@
-export type DeviceProps = {
-    id: number;
-    deviceName: string;
-    slug: string;
+export interface DeviceSystem {
     os?: string;
     cpu: string;
     ram: string;
     memory: string;
+    memoryAvailable?: string;
+    threads?: number | string;
+    core?: number;
+  }
+
+export type DeviceProps = {
+    id: number;
+    deviceName: string;
+    slug: string;
+    system: DeviceSystem;
     price: number;
     imageUrl: string[];
-    memoryAvailable?: string;
     description: string;
-    core?: number;
-    threads?: number | string
+    promotions: string[];
+}
+
+export interface HeadsetSystem {
+    battery: string,
+    caseBattery?: string,
+    chargingPort: string,
+    technologies: string[],
+    utility: string[],
 }
 
 export type HeadsetProps = {
     id: number;
     name: string;
     slug: string;
-    battery: string,
-    caseBattery?: string,
-    chargingPort: string,
-    technologies: string[],
-    utility: string[],
+    information: HeadsetSystem;
     description: string;
     imageUrl: string[];
+    price: number;
+    promotions: string[];
 }

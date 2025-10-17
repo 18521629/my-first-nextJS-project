@@ -1,9 +1,9 @@
 "use client"
 import "./globals.css";
-import { useState } from "react";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import "@splidejs/react-splide/css";
 import Link from "next/link";
+import { Toaster } from "@/components/ui";
 
 // const geistSans = Geist({
 //   variable: "--font-geist-sans",
@@ -91,6 +91,7 @@ export default function RootLayout({
       </Splide>
       </div>
         <main>{children}</main>
+        <Toaster />
       </body>
     </html>
   );
