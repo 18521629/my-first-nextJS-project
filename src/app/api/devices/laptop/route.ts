@@ -26,6 +26,12 @@ export const MOCK_DATA_LAPTOP: DeviceProps[] = [
             "Phiếu mua hàng áp dụng mua tất cả sim có gói Mobi, Itel, Local, Vina ,VNMB và 2 gói cước (Siêu việt, 5G180) của Viettel trị giá 50,000đ.",
             "Thu cũ đổi mới: Giảm đến 2,000,000đ (Không kèm ưu đãi thanh toán qua cổng, mua kèm)",
             "Trả chậm 0% lãi suất. Đặc biệt giảm đến 10% tối đa 5 triệu khi thanh toán qua Kredivo"
+        ],
+        commitment: [
+            "Sản phẩm mới (Cần thanh toán trước khi mở hộp).",
+            "1 đổi 1 trong tháng đầu tiên kể từ ngày mua, từ tháng thứ 2 đến tháng thứ 12 áp dụng bảo hành cam kết",
+            "Trong hộp có: 5 cặp đệm tai nghe, Tư liệu, Hộp sạc MagSafe và vòng dây buộc, Tai nghe",
+            "Bảo hành chính hãng tai nghe 1 năm tại các trung tâm bảo hành hãng"
         ]
     },
     {
@@ -53,7 +59,13 @@ export const MOCK_DATA_LAPTOP: DeviceProps[] = [
             "Phiếu mua hàng áp dụng mua tất cả sim có gói Mobi, Itel, Local, Vina ,VNMB và 2 gói cước (Siêu việt, 5G180) của Viettel trị giá 50,000đ.",
             "Thu cũ đổi mới: Giảm đến 2,000,000đ (Không kèm ưu đãi thanh toán qua cổng, mua kèm)",
             "Trả chậm 0% lãi suất. Đặc biệt giảm đến 10% tối đa 5 triệu khi thanh toán qua Kredivo",
-            "Nhập mã VNPAYTGDD4 giảm tối đa 100,000đ (áp dụng tùy giá trị đơn hàng) khi thanh toán qua VNPAY-QR"
+            "Nhập mã VNPAY4 giảm tối đa 100,000đ (áp dụng tùy giá trị đơn hàng) khi thanh toán qua VNPAY-QR"
+        ],
+        commitment: [
+            "Sản phẩm mới (Cần thanh toán trước khi mở hộp).",
+            "1 đổi 1 trong tháng đầu tiên kể từ ngày mua, từ tháng thứ 2 đến tháng thứ 12 áp dụng bảo hành cam kết",
+            "Trong hộp có: 5 cặp đệm tai nghe, Tư liệu, Hộp sạc MagSafe và vòng dây buộc, Tai nghe",
+            "Bảo hành chính hãng tai nghe 1 năm tại các trung tâm bảo hành hãng"
         ]
     },
     {
@@ -82,6 +94,12 @@ export const MOCK_DATA_LAPTOP: DeviceProps[] = [
             "Thu cũ đổi mới: Giảm đến 2,000,000đ (Không kèm ưu đãi thanh toán qua cổng, mua kèm)",
             "Trả chậm 0% lãi suất. Đặc biệt giảm đến 10% tối đa 5 triệu khi thanh toán qua Kredivo",
             "Nhận ngay 200.000đ hoàn tiền khi mở thẻ tín dụng TPBank EVO và chi tiêu từ 1 triệu đồng"
+        ],
+        commitment: [
+            "Sản phẩm mới (Cần thanh toán trước khi mở hộp).",
+            "1 đổi 1 trong tháng đầu tiên kể từ ngày mua, từ tháng thứ 2 đến tháng thứ 12 áp dụng bảo hành cam kết",
+            "Trong hộp có: 5 cặp đệm tai nghe, Tư liệu, Hộp sạc MagSafe và vòng dây buộc, Tai nghe",
+            "Bảo hành chính hãng tai nghe 1 năm tại các trung tâm bảo hành hãng"
         ]
     }
 ]

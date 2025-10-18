@@ -57,38 +57,38 @@ export default function RootLayout({
 
   return (
     <html lang="en">
-      <body className="bg-white text-black min-h-screen">
+      <body className="bg-gray-200 text-black min-h-screen">
       <div className="bg-yellow-400 py-4 px-6">
-      <Splide
-        options={{
-          type: "loop",
-          perPage: 1,
-          perMove: 1,
-          gap: "1rem",
-          pagination: false,
-          arrows: true,
-        }}
-        aria-label="Menu Carousel"
-      >
-        {menu.map((cat) => (
-          <SplideSlide key={cat.slug}>
-            <div className="bg-yellow-300 p-4 rounded-lg shadow flex flex-col gap-2">
-              <h3 className="font-bold text-blue-950">{cat.name}</h3>
-              <div className="flex flex-col gap-1">
-                {cat.item.map((item) => (
-                  <Link
-                    key={item.slug}
-                    href={`/${cat.slug}/${item.slug}`}
-                    className="hover:text-amber-950 text-amber-700"
-                  >
-                    {item.name}
-                  </Link>
-                ))}
+        <Splide
+          options={{
+            type: "loop",
+            perPage: 1,
+            perMove: 1,
+            gap: "1rem",
+            pagination: false,
+            arrows: true,
+          }}
+          aria-label="Menu Carousel"
+        >
+          {menu.map((cat) => (
+            <SplideSlide key={cat.slug}>
+              <div className="bg-yellow-300 p-4 rounded-lg shadow flex flex-col gap-2">
+                <h3 className="font-bold text-blue-950">{cat.name}</h3>
+                <div className="flex flex-col gap-1">
+                  {cat.item.map((item) => (
+                    <Link
+                      key={item.slug}
+                      href={`/${cat.slug}/${item.slug}`}
+                      className="hover:text-amber-950 text-amber-700"
+                    >
+                      {item.name}
+                    </Link>
+                  ))}
+                </div>
               </div>
-            </div>
-          </SplideSlide>
-        ))}
-      </Splide>
+            </SplideSlide>
+          ))}
+        </Splide>
       </div>
         <main>{children}</main>
         <Toaster />

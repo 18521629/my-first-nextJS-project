@@ -17,6 +17,7 @@ export type DeviceProps = {
     imageUrl: string[];
     description: string;
     promotions: string[];
+    commitment: string[];
 }
 
 export interface HeadsetSystem {

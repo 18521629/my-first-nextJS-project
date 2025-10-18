@@ -4,11 +4,12 @@
 import { DeviceProps } from "@/app/api/devices/type";
 import { getDetailProduct, sendRating } from "@/lib/api";
 import { useState, useEffect, use } from "react";
-import { ProductInformation, TechnicalSpecifications, Price, WriteComment, CommonCarousel } from "@/components/shared";
+import { ProductInformation, TechnicalSpecifications, Price, WriteComment, CommonCarousel, Commitment } from "@/components/shared";
 import Head from "next/head";
 import { CustomButton } from "@/components/ui/custom-button";
 import { validators } from "@/lib";
 import { toast } from "sonner";
+import { Loader2 } from "lucide-react";
 
 export default function MobileDevice({ params }: { params: Promise<{ "device-slug": string }> }) {
     const SpecificationsLabels = {
@@ -19,20 +20,28 @@ export default function MobileDevice({ params }: { params: Promise<{ "device-slu
         memory: "Dung lượng lưu trữ",
         memoryAvailable: "Dung lượng còn lại (khả dụng) khoảng",
     };
-
+    const [isLoading, setIsLoading] = useState(false)
     const [itemData, setItemData] = useState<DeviceProps | null>(null);
     const [tab, setTab] = useState('specifications')
     const resolvedParams = use(params);
     const slug = resolvedParams["device-slug"];
   
   
-  useEffect(() => {
-    const fetchData = async () => {
-      const data = await getDetailProduct(slug);
-      setItemData(data);
+    useEffect(() => {
+        const fetchData = async () => {
+            try {
+                setIsLoading(true);
+                await new Promise((resolve) => setTimeout(resolve, 3000));
+                const data = await getDetailProduct(slug);
+                setItemData(data);
+            } catch (error) {
+                console.error(error);
+            } finally {
+                setIsLoading(false);
+            }
     };
-    fetchData();
-  }, [slug]);
+        fetchData();
+    }, [slug]);
   
   const onSendRating = async (numRate: number) => {
     try {
@@ -58,9 +67,15 @@ export default function MobileDevice({ params }: { params: Promise<{ "device-slu
         </Head>
 
         <main className="min-h-screen">
+            {isLoading && (
+                <div className="flex justify-center items-center py-10">
+                    <Loader2 className="w-6 h-6 animate-spin text-yellow-500" />
+                    <span className="ml-2 text-yellow-600">Đang tải...</span>
+                </div>
+            )}
             <h1 className="font-bold size-10 w-full text-amber-950 mb-2.5 mt-2.5 pl-3.5">{itemData?.deviceName}</h1>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                
+            {!isLoading && <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+
                 <div className="space-y-6 w-[95%] mx-auto">
                     <CommonCarousel 
                         itemData={itemData}
@@ -74,7 +89,18 @@ export default function MobileDevice({ params }: { params: Promise<{ "device-slu
                      />
                 </div>
 
-                <div>
+                <div className="rounded-2xl border bg-white w-[95%] mx-auto overflow-hidden">
+                    <p className="font-bold pl-5 pt-5">
+                        Chúng tôi cam kết
+                    </p>
+                    <Commitment 
+                        commitment={validators.isNonEmptyObject ? itemData?.commitment : []}/>
+                </div>
+
+                <WriteComment
+                    sendRating={onSendRating}
+                />
+                <div className="rounded-2xl border bg-white w-[95%] mx-auto">
                     <div className="flex justify-around py-7 px-5">
                     <CustomButton
                         label="Thông số kỹ thuật"
@@ -100,13 +126,29 @@ export default function MobileDevice({ params }: { params: Promise<{ "device-slu
                                 description={validators.isNonEmptyObject ? itemData?.description : ""}/>}
                     </div>
                 </div>
-
-                <WriteComment
-                    sendRating={onSendRating}
-                />
-            </div>
+            </div>}
         </main>
-        <footer>
+        <footer className="bg-gray-900 text-gray-300 py-8 mt-10">
+            <div className="max-w-6xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center">
+                <div className="text-center md:text-left mb-4 md:mb-0">
+                    <h2 className="text-lg font-semibold text-white">Future Tech Store</h2>
+                    <p className="text-sm mt-2">
+                        &copy; {new Date().getFullYear()} All rights reserved.
+                    </p>
+                </div>
+
+                <div className="flex space-x-6">
+                    <a href="#" className="hover:text-amber-400 transition-colors">
+                        Chính sách bảo hành
+                    </a>
+                    <a href="#" className="hover:text-amber-400 transition-colors">
+                        Liên hệ
+                    </a>
+                    <a href="#" className="hover:text-amber-400 transition-colors">
+                        Về chúng tôi
+                    </a>
+                </div>
+            </div>
         </footer>
     </>
   );

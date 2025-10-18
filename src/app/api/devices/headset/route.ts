@@ -33,8 +33,8 @@ export const MOCK_DATA_HEADSET: HeadsetProps[] = [
         promotions: [
             "Trả chậm 0% lãi suất. Đặc biệt giảm đến 10% tối đa 5 triệu khi thanh toán qua Kredivo",
             "Trả chậm 0 Đồng - 0% Lãi suất kỳ hạn 1- 4 tháng. Giảm 5% tối đa 50,000đ áp dụng đơn hàng tối thiểu 250,000đ khi thanh toán lần đầu qua HOME PayLater",
-            "0% Lãi suất, 0Đ Trả trước, Trả chậm đến 3 tháng qua MWG PAYLATER",
-            "Nhập mã VNPAYTGDD4 giảm tối đa 100,000đ (áp dụng tùy giá trị đơn hàng) khi thanh toán qua VNPAY-QR",
+            "0% Lãi suất, 0Đ Trả trước, Trả chậm đến 3 tháng qua PAYLATER",
+            "Nhập mã VNPAY4 giảm tối đa 100,000đ (áp dụng tùy giá trị đơn hàng) khi thanh toán qua VNPAY-QR",
             "Nhận ngay 200.000đ hoàn tiền khi mở thẻ tín dụng TPBank EVO và chi tiêu từ 1 triệu đồng"
         ]
     },
@@ -70,8 +70,8 @@ export const MOCK_DATA_HEADSET: HeadsetProps[] = [
         promotions: [
             "Trả chậm 0% lãi suất. Đặc biệt giảm đến 10% tối đa 5 triệu khi thanh toán qua Kredivo",
             "Trả chậm 0 Đồng - 0% Lãi suất kỳ hạn 1- 4 tháng. Giảm 5% tối đa 50,000đ áp dụng đơn hàng tối thiểu 250,000đ khi thanh toán lần đầu qua HOME PayLater",
-            "0% Lãi suất, 0Đ Trả trước, Trả chậm đến 3 tháng qua MWG PAYLATER",
-            "Nhập mã VNPAYTGDD4 giảm tối đa 100,000đ (áp dụng tùy giá trị đơn hàng) khi thanh toán qua VNPAY-QR",
+            "0% Lãi suất, 0Đ Trả trước, Trả chậm đến 3 tháng qua PAYLATER",
+            "Nhập mã VNPAY4 giảm tối đa 100,000đ (áp dụng tùy giá trị đơn hàng) khi thanh toán qua VNPAY-QR",
             "Nhận ngay 200.000đ hoàn tiền khi mở thẻ tín dụng TPBank EVO và chi tiêu từ 1 triệu đồng"
         ]
     },
@@ -117,8 +117,8 @@ export const MOCK_DATA_HEADSET: HeadsetProps[] = [
         promotions: [
             "Trả chậm 0% lãi suất. Đặc biệt giảm đến 10% tối đa 5 triệu khi thanh toán qua Kredivo",
             "Trả chậm 0 Đồng - 0% Lãi suất kỳ hạn 1- 4 tháng. Giảm 5% tối đa 50,000đ áp dụng đơn hàng tối thiểu 250,000đ khi thanh toán lần đầu qua HOME PayLater",
-            "0% Lãi suất, 0Đ Trả trước, Trả chậm đến 3 tháng qua MWG PAYLATER",
-            "Nhập mã VNPAYTGDD4 giảm tối đa 100,000đ (áp dụng tùy giá trị đơn hàng) khi thanh toán qua VNPAY-QR",
+            "0% Lãi suất, 0Đ Trả trước, Trả chậm đến 3 tháng qua PAYLATER",
+            "Nhập mã VNPAY4 giảm tối đa 100,000đ (áp dụng tùy giá trị đơn hàng) khi thanh toán qua VNPAY-QR",
             "Nhận ngay 200.000đ hoàn tiền khi mở thẻ tín dụng TPBank EVO và chi tiêu từ 1 triệu đồng"
         ]
     }

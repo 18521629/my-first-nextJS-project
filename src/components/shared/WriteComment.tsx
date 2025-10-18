@@ -9,7 +9,7 @@ export default function WriteComment({
         <div className="ml-10 md:ml-1">
             <Label htmlFor="rating">Viết đánh giá về sản phẩm này</Label>
             <Input 
-                className="mt-5 py-5 w-[50%]" 
+                className="mt-5 py-5 w-[50%] bg-white" 
                 id="rating" 
                 type="number" 
                 value={score}

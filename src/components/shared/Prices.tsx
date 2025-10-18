@@ -6,7 +6,7 @@ export default function Price({
     promotions
 }){
     return(
-        <div className="w-[95%] rounded-2xl border mx-auto">
+        <div className="w-[95%] rounded-2xl border mx-auto bg-white">
             <p className="px-6 py-2 font-bold text-2xl text-red-900">
                 {formatMoney(price)}
             </p>
