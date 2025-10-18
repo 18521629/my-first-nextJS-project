@@ -31,7 +31,7 @@ export default function MobileDevice({ params }: { params: Promise<{ "device-slu
         const fetchData = async () => {
             try {
                 setIsLoading(true);
-                await new Promise((resolve) => setTimeout(resolve, 3000));
+                await new Promise((resolve) => setTimeout(resolve, 2000));
                 const data = await getDetailProduct(slug);
                 setItemData(data);
             } catch (error) {
